@@ -1,0 +1,30 @@
+{% extends "FrontendBundle:Layouts:1column.html.twig" %}
+
+{% block title %}{{ "Portal de alquiler temporal de espacios comerciales y eventos: espacios para pop-up stores, corners, eventos y showrooms"|trans }}{% endblock %}
+{% block description %}{{"Portal para el alquiler de espacios comerciales por meses, semanas y días. Portal de alquiler de espacios para pop-ups, espacios para corners, espacios para eventos, espacios de coworking "|trans}}{% endblock %}
+{% block sectionclass %}home page{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <span class="fa fa-facebook"></span>
+    </div><!-- .row -->
+
+
+    {#<div class="row">
+      <div class="col-md-12 logos-company">
+        <i class="logo fa fa-android"></i>
+        <i class="logo fa fa-skype"></i>
+        <i class="logo fa fa-maxcdn"></i>
+        <i class="logo fa fa-pagelines"></i>
+      </div>
+    </div>#}
+
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
