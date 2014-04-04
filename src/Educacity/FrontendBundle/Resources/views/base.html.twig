@@ -13,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="{{asset('bundles/frontend/img/favicon.ico')}}">
     {% block mainstylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/frontend/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/frontend/css/fonts/fonts.css') }}">
         {% stylesheets filter='cssrewrite, sass' output='css/main.css'
         'bundles/frontend/css/fonts/font-awesome/css/font-awesome.min.css'
         'bundles/frontend/css/custom.scss'%}

@@ -5,3 +5,11 @@
     url('Roboto/Roboto-Regular.ttf')  format('truetype'),
     url('Roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
 }
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('Roboto-Thin/Roboto-Thin.eot?') format('eot'),
+    url('Roboto-Thin/Roboto-Thin.woff') format('woff'),
+    url('Roboto-Thin/Roboto-Thin.ttf')  format('truetype'),
+    url('Roboto-Thin/Roboto-Thin.svg#Roboto-Thin') format('svg');
+}

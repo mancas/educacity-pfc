@@ -1,6 +1,7 @@
 $light-gray : #E1E4E6;
 $gray : #5B6064;
 $white : #FFFFFF;
+$stack-gray : #5B6064;
 
 body {
   color: #333333;
@@ -82,7 +83,80 @@ body {
 /** Banner top **/
 
 #banner-top {
-  .image img {
-    width: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  .image {
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
   }
+
+  .text {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    z-index: 30;
+    color: #FFF;
+    margin-top: 160px;
+    padding: 30px;
+    border-radius: 10px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 1);
+    /*background-color: rgba(0, 0, 0, 0.2);*/
+  }
+
+  .link {
+    display: inline-block;
+    margin-top: 30px;
+
+    .btn-yellow {
+      background-color: #e9b330;
+      border: solid 1px #e9b330;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+      padding: 15px;
+      border-radius: 0;
+      transition: all 0.15s ease-in-out 0s;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #FFB90F;
+        border-color: #DCAA30;
+      }
+
+      i {
+        margin-right: 8px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/** Main page **/
+.stack {
+  padding: 160px 0px;
+
+  .stack-title {
+    font-size: 50px;
+    letter-spacing: -2px;
+    line-height: 50px;
+    font-family: 'Roboto-Thin', sans-serif;
+  }
+
+  .stack-description {
+    font-size: 16px;
+    margin-top: 50px;
+    font-weight: 100;
+    line-height: 35px;
+    color: $stack-gray;
+  }
+}
+
+.stack img {
+  display: block;
+  margin: auto;
 }

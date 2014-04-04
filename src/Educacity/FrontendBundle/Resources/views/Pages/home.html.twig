@@ -9,9 +9,21 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <span class="fa fa-facebook"></span>
-    </div><!-- .row -->
+    <section id="#introduction" class="stack">
+        <div class="row">
+            <div class="col-md-6">
+                <img alt="Educacity-smartphone" class="pull-riht" src="{{ asset('bundles/frontend/img/smartphone.jpg') }}" >
+            </div><!-- .col-md-6 -->
+            <div class="col-md-6">
+                <h2 class="stack-title">{{ 'Historia y tecnología unidas en una única aplicación' | trans }}</h2>
+                <p class="stack-description">
+                    {{ 'No pierdas un detalle de lo que pasó a tu alrededor y de todos los edificios emblemáticos de Sevilla.' | trans }}
+                    <br>
+                    {{ 'Recorre cada calle, cada rincón de tu ciudad...y sumergete en TODO' }}
+                </p>
+            </div><!-- .col-md-6 -->
+        </div><!-- .row -->
+    </section>
 
 
     {#<div class="row">
