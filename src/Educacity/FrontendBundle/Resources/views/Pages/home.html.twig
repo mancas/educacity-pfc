@@ -9,22 +9,35 @@
 {% endblock %}
 
 {% block content %}
-    <section id="#introduction" class="stack">
-        <div class="row">
-            <div class="col-md-6">
-                <img alt="Educacity-smartphone" class="pull-riht" src="{{ asset('bundles/frontend/img/smartphone.jpg') }}" >
-            </div><!-- .col-md-6 -->
-            <div class="col-md-6">
-                <h2 class="stack-title">{{ 'Historia y tecnología unidas en una única aplicación' | trans }}</h2>
-                <p class="stack-description">
-                    {{ 'No pierdas un detalle de lo que pasó a tu alrededor y de todos los edificios emblemáticos de Sevilla.' | trans }}
-                    <br>
-                    {{ 'Recorre cada calle, cada rincón de tu ciudad...y sumergete en TODO' }}
-                </p>
-            </div><!-- .col-md-6 -->
-        </div><!-- .row -->
+    <section id="#introduction">
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-6">
+                    <img alt="Educacity-smartphone" class="pull-riht" src="{{ asset('bundles/frontend/img/smartphone.jpg') }}" >
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                    <h2 class="stack-title">{{ 'Historia y tecnología unidas en una única aplicación' | trans }}</h2>
+                    <p class="stack-description">
+                        {{ 'No pierdas un detalle de lo que pasó a tu alrededor y de todos los edificios emblemáticos de Sevilla.' | trans }}
+                        <br>
+                        {{ 'Recorre cada calle, cada rincón de tu ciudad...y sumergete en TODO' }}
+                    </p>
+                </div><!-- .col-md-6 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
     </section>
 
+    <div class="bg-parallax multimedia">
+        <section id="multimedia">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="parallax-title">{{ 'Captura tus momentos únicos junto a los que más quieres' | trans }}</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div><!-- .bg-parallax .multimedia -->
 
     {#<div class="row">
       <div class="col-md-12 logos-company">
