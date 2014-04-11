@@ -2,9 +2,7 @@
 
 namespace Educacity\FrontendBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class FrontendController extends Controller
+class FrontendController extends CustomController
 {
     public function indexAction()
     {

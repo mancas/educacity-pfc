@@ -1,0 +1,66 @@
+{% extends "FrontendBundle:Layouts:1column.html.twig" %}
+
+{% block title %}{{ "Forma parte de Educacity"|trans }}{% endblock %}
+{% block description %}{{"Regístrate en Educacity para tener acceso a la app y poder disfrutar de Sevilla como nunca antes lo habías hecho."|trans}}{% endblock %}
+{% block sectionclass %}registration page{% endblock %}
+
+{% block header %}
+    {% include 'FrontendBundle:Commons:nav-top.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-6">
+                    <form role="form" novalidate action="{{ path('register') }}" method="post" {{ form_enctype(form) }}>
+                        <div class="form-group">
+                            {{ form_widget(form.user.email.first, {'attr': {'class': 'form-control'}}) }}
+                        </div><!-- .form-group -->
+
+                        <div class="form-group">
+                            {{ form_widget(form.user.email.second, {'attr': {'class': 'form-control'}}) }}
+                        </div><!-- .form-group -->
+
+                        {% if form_errors(form.user.email) is not empty %}
+                            <div class="alert alert-danger">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>{{ "Error" | trans }}:</strong> {{ form_errors(form.user.email) }}
+                            </div>
+                        {% endif %}
+
+                        <hr>
+
+                        <div class="form-group">
+                            {{ form_widget(form.user.password.first, {'attr': {'class': 'form-control'}}) }}
+                        </div><!-- .form-group -->
+
+                        <div class="form-group">
+                            {{ form_widget(form.user.password.second, {'attr': {'class': 'form-control'}}) }}
+                        </div><!-- .form-group -->
+
+                        <div class="form-group">
+                            <hr>
+                            <div class="checkbox">
+                                {{ form_widget(form.terms) }}
+                                <label class="help-block">
+                                    {{ "He leído y acepto las" | trans }}
+                                    <a href="" target="_blank"> {{ "condiciones de uso" | trans }}</a>
+                                </label>
+                            </div><!-- .checkbox -->
+                        </div><!-- .form-group -->
+                        {{ form_rest(form)}}
+                        <div class="form-group">
+                            <button id="register" type="submit" class="btn btn-blue btn-large btn-block">{{ "Registrarme en Educacity" | trans }}</button>
+                            <img style="display:none;" class="ml15 loader pull-lef" src="{{ asset('bundles/frontend/img/ajax-loader.gif') }}">
+                        </div><!-- .form-group -->
+                    </form><!-- form -->
+                </div><!-- .col-md-6 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

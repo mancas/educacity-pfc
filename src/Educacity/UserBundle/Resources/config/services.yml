@@ -1,7 +1,15 @@
+imports:
+    - { resource: "../../../../../app/config/parameters.yml" }
+
 parameters:
 #    user.example.class: Educacity\UserBundle\Example
+    user.manager.class: Educacity\UserBundle\Form\Handler\UserManager
+    user.createuserformhandler.class: Educacity\UserBundle\Form\Handler\CreateUserFormHandler
 
 services:
-#    user.example:
-#        class: %user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    user.manager:
+        class: %user.manager.class%
+        arguments: [@doctrine.orm.entity_manager]
+    user.create_user_form_handler:
+        class: %user.createformhandler.class%
+        arguments: [@user.manager]

@@ -11,6 +11,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Table()
+ * @ORM\Entity
  * @DoctrineAssert\UniqueEntity("email")
  * @UniqueEntity("email")
  */
