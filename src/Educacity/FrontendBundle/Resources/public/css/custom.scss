@@ -2,6 +2,7 @@ $light-gray : #E1E4E6;
 $gray : #5B6064;
 $white : #FFFFFF;
 $stack-gray : #5B6064;
+$light-blue: #3672b1;
 
 body {
   color: #333333;
@@ -113,26 +114,6 @@ body {
   .link {
     display: inline-block;
     margin-top: 30px;
-
-    .btn-blue {
-      background-color: #3672b1;
-      border: solid 1px #3672b1;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
-      padding: 15px;
-      border-radius: 0;
-      transition: all 0.15s ease-in-out 0s;
-      font-size: 16px;
-
-      &:hover {
-        background-color: #00ABE4;
-        border-color: #00ABE4;
-      }
-
-      i {
-        margin-right: 8px;
-        font-size: 16px;
-      }
-    }
   }
 }
 
@@ -189,5 +170,53 @@ section {
     color: $white;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 1);
     margin-top: 106px;
+  }
+}
+
+.line-block {
+  margin-bottom: 40px;
+  border-bottom: solid 1px $light-gray;
+
+  .title-block {
+    border-bottom: solid 4px $light-blue;
+    line-height: 40px;
+    display: inline;;
+    margin: 0px;
+    color: $stack-gray;
+  }
+}
+
+/**
+*  Buttons
+*/
+
+.btn-blue {
+  background-color: #3672b1;
+  border: solid 1px #3672b1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+  padding: 15px;
+  border-radius: 0;
+  transition: all 0.15s ease-in-out 0s;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #00ABE4;
+    border-color: #00ABE4;
+  }
+
+  i {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+}
+
+.btn-block {
+  border-radius: 2px;
+  color: $white;
+  text-shadow: none;
+  padding: 10px 15px;
+
+  &:hover {
+    color: $white;
   }
 }

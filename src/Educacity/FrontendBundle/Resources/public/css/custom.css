@@ -80,20 +80,6 @@ body {
   #banner-top .link {
     display: inline-block;
     margin-top: 30px; }
-    #banner-top .link .btn-blue {
-      background-color: #3672b1;
-      border: solid 1px #3672b1;
-      text-shadow: 0 1px 3px black;
-      padding: 15px;
-      border-radius: 0;
-      transition: all 0.15s ease-in-out 0s;
-      font-size: 16px; }
-      #banner-top .link .btn-blue:hover {
-        background-color: #00ABE4;
-        border-color: #00ABE4; }
-      #banner-top .link .btn-blue i {
-        margin-right: 8px;
-        font-size: 16px; }
 
 /** Main page **/
 .container {
@@ -137,3 +123,39 @@ section .container {
     color: white;
     text-shadow: 0 2px 2px black;
     margin-top: 106px; }
+
+.line-block {
+  margin-bottom: 40px;
+  border-bottom: solid 1px #e1e4e6; }
+  .line-block .title-block {
+    border-bottom: solid 4px #3672b1;
+    line-height: 40px;
+    display: inline;
+    margin: 0px;
+    color: #5b6064; }
+
+/**
+*  Buttons
+*/
+.btn-blue {
+  background-color: #3672b1;
+  border: solid 1px #3672b1;
+  text-shadow: 0 1px 3px black;
+  padding: 15px;
+  border-radius: 0;
+  transition: all 0.15s ease-in-out 0s;
+  font-size: 16px; }
+  .btn-blue:hover {
+    background-color: #00ABE4;
+    border-color: #00ABE4; }
+  .btn-blue i {
+    margin-right: 8px;
+    font-size: 16px; }
+
+.btn-block {
+  border-radius: 2px;
+  color: white;
+  text-shadow: none;
+  padding: 10px 15px; }
+  .btn-block:hover {
+    color: white; }
