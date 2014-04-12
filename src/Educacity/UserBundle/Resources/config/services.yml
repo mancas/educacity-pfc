@@ -5,11 +5,17 @@ parameters:
 #    user.example.class: Educacity\UserBundle\Example
     user.manager.class: Educacity\UserBundle\Form\Handler\UserManager
     user.createuserformhandler.class: Educacity\UserBundle\Form\Handler\CreateUserFormHandler
+    user.createsalt.class: Educacity\UserBundle\EventListener\CreateUserSaltEventSubscriber
 
 services:
     user.manager:
         class: %user.manager.class%
         arguments: [@doctrine.orm.entity_manager]
     user.create_user_form_handler:
-        class: %user.createformhandler.class%
+        class: %user.createuserformhandler.class%
         arguments: [@user.manager]
+    user.create_salt_listener:
+        class: %user.createsalt.class%
+        arguments: [@security.encoder_factory]
+        tags:
+            - { name: doctrine.event_subscriber }

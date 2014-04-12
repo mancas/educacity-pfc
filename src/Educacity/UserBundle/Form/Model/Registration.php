@@ -8,7 +8,7 @@ use Educacity\UserBundle\Entity\User;
 class Registration
 {
     /**
-     * @Assert\type("Educacity\UserBundle\Entity\User")
+     * @Assert\Type("Educacity\UserBundle\Entity\User")
      */
     protected $user;
 
