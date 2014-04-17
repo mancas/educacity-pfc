@@ -21,4 +21,9 @@ class UserController extends CustomController
 
         return $this->render('UserBundle:Commons:registration.html.twig', array('form' => $form->createView()));
     }
+
+    public function loginAction()
+    {
+
+    }
 }

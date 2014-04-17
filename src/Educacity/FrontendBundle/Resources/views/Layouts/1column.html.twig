@@ -8,15 +8,15 @@
 {% block body %}
     <div class="container container-main">
         {% block error %}
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row nmr">
+                <div class="col-md-12 col-main">
                     {# include 'FrontendBundle:Commons:flashes.html.twig' #}
                 </div>
             </div>
         {% endblock %}
 
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row nmr">
+            <div class="col-md-12 col-main">
                 {% block content %}{% endblock %}
             </div>
         </div>

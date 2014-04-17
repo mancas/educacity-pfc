@@ -1,3 +1,17 @@
+site:
+    resource: "@SiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern: /login
+    defaults: { _controller: UsuarioBundle:Usuario:login }
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /

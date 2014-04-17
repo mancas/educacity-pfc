@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Educacity\FrontendBundle\FrontendBundle(),
             new Educacity\UserBundle\UserBundle(),
+            new Educacity\SiteBundle\SiteBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -21,7 +21,12 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "stof/doctrine-extensions-bundle": "~1.1@dev",
         "gedmo/doctrine-extensions":      "dev-master",
-        "raulfraile/ladybug-bundle": "~1.0"
+        "raulfraile/ladybug-bundle": "~1.0",
+        "friendsofsymfony/rest-bundle": "1.1.*",
+        "jms/serializer-bundle": "0.*",
+        "beberlei/DoctrineExtensions": "dev-master",
+        "nelmio/api-doc-bundle": "@dev",
+        "friendsofsymfony/oauth-server-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

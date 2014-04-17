@@ -2,6 +2,22 @@ body {
   color: #333333;
   font-family: 'Roboto-Regular', sans-serif; }
 
+.m0 {
+  margin: 0px; }
+
+.mb0 {
+  margin-bottom: 0px !important; }
+
+.mt59 {
+  margin-top: 59px; }
+
+.block {
+  display: block !important; }
+
+.nmr {
+  margin-right: 0px;
+  margin-left: 0px; }
+
 .educacity-navbar {
   height: 59px;
   background-color: white;
@@ -9,7 +25,7 @@ body {
   .educacity-navbar .custom-nav {
     width: 100%;
     height: 59px;
-    padding: 0px 15px 0px 0px; }
+    padding: 0px; }
   .educacity-navbar a {
     padding: 19px 15px !important;
     height: auto; }
@@ -26,15 +42,42 @@ body {
     .educacity-navbar .educacity-menu:hover {
       background-color: #5B6064;
       color: white; }
+  .educacity-navbar .navbar-nav.navbar-right:last-child {
+    margin-right: 0px; }
   .educacity-navbar .login {
     background-color: #00ABE4;
     border-left: solid 1px #0099CC;
     border-bottom: solid 1px #0099CC;
-    color: white !important; }
-    .educacity-navbar .login:hover {
+    color: white !important;
+    transition: all 0.15s ease-in-out 0s; }
+    .educacity-navbar .login:hover, .educacity-navbar .login:active, .educacity-navbar .login:focus {
       border-left-color: #5b6064;
       border-bottom-color: #5b6064;
       background-color: #5b6064 !important; }
+  .educacity-navbar .navbar-form {
+    background-color: white;
+    padding: 15px !important;
+    margin: 0px;
+    overflow: hidden; }
+  .educacity-navbar .navbar-form-container {
+    margin-top: 59px;
+    max-width: 228px;
+    position: absolute;
+    right: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75); }
+    .educacity-navbar .navbar-form-container .row {
+      margin-bottom: 15px; }
+    .educacity-navbar .navbar-form-container .btn-blue {
+      padding: 8px;
+      display: block;
+      width: 100%;
+      color: white;
+      text-shadow: none; }
 
 .sidebar {
   position: fixed;
@@ -80,6 +123,9 @@ body {
   #banner-top .link {
     display: inline-block;
     margin-top: 30px; }
+
+.col-main {
+  padding: 0px; }
 
 /** Main page **/
 .container {
