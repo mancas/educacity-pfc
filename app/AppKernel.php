@@ -20,6 +20,13 @@ class AppKernel extends Kernel
             new Educacity\FrontendBundle\FrontendBundle(),
             new Educacity\UserBundle\UserBundle(),
             new Educacity\SiteBundle\SiteBundle(),
+            new Educacity\RegisterBundle\RegisterBundle(),
+            new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+            new Educacity\OAuthBundle\OAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

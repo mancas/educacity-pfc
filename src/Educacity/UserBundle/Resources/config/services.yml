@@ -6,6 +6,10 @@ parameters:
     user.manager.class: Educacity\UserBundle\Form\Handler\UserManager
     user.createuserformhandler.class: Educacity\UserBundle\Form\Handler\CreateUserFormHandler
     user.createsalt.class: Educacity\UserBundle\EventListener\CreateUserSaltEventSubscriber
+    user.userhandler.class: Educacity\UserBundle\Form\Handler\UserHandler
+    user.class: Educactiy\UserBundle\Entity\User
+    user.respoistory.class: Educacity\UserBundle\Entity\UserRepository
+    user.provider.class: Educacity\UserBundle\Provider\UserProvider
 
 services:
     user.manager:
@@ -19,3 +23,14 @@ services:
         arguments: [@security.encoder_factory]
         tags:
             - { name: doctrine.event_subscriber }
+    user.handler:
+        class: %user.userhandler.class%
+        arguments: [@doctrine.orm.entity_manager, @form.factory, @security.encoder_factory]
+    user.repository:
+        class: %user.repository.class%
+        factory_service: user.manager
+        factory_method: getRepository
+        arguments: [%user.class%]
+    user.provider:
+        class: %user.provider.class%
+        arguments: [@user.respository]

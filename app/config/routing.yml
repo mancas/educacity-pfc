@@ -1,3 +1,11 @@
+o_auth:
+    resource: "@OAuthBundle/Resources/config/routing.yml"
+    prefix:   /
+
+register:
+    resource: "@RegisterBundle/Resources/config/routing.yml"
+    prefix:   /
+
 site:
     resource: "@SiteBundle/Resources/config/routing.yml"
     prefix:   /

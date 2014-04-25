@@ -71,3 +71,39 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_rest:
+    param_fetcher_listener: true
+    disable_csrf_role: true
+
+jms_serializer:
+     handlers:
+         datetime:
+             default_format: "c"
+             default_timezone: "UTC"
+     property_naming:
+         separator:  _
+         lower_case: true
+     metadata:
+         cache: file
+         debug: "%kernel.debug%"
+         file_cache:
+             dir: "%kernel.cache_dir%/serializer"
+         auto_detection: true
+     visitors:
+         json:
+             options: 0
+         xml:
+             doctype_whitelist:
+                 - '<!DOCTYPE authorized SYSTEM "http://some_url">'
+
+fos_oauth_server:
+    db_driver: orm
+    client_class:        Educacity\OAuthBundle\Entity\Client
+    access_token_class:  Educacity\OAuthBundle\Entity\AccessToken
+    refresh_token_class: Educacity\OAuthBundle\Entity\RefreshToken
+    auth_code_class:     Educacity\OAuthBundle\Entity\AuthCode
+    #service:
+    #    user_provider: user.provider
+    #    options:
+    #        supported_scopes: user veterinary

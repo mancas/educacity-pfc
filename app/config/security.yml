@@ -31,6 +31,22 @@ security:
             remember_me:
                 key: %secret%
                 lifetime: 5184000
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+
+        oauth_authorize:
+            pattern:    ^/oauth/v2/auth
+            form_login:
+                provider: user
+                check_path: oauth_server_auth_login_check
+                login_path: oauth_server_auth_login
+            anonymous: true
+
+        api:
+            pattern:    ^/security/
+            fos_oauth:  true
+            stateless:  true
 
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

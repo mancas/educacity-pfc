@@ -1,0 +1,5 @@
+register_rest:
+    pattern:  /register-from-app
+    defaults: { _controller: RegisterBundle:Register:register, _format: ~ }
+    requirements:
+        _method: POST
