@@ -103,7 +103,7 @@ fos_oauth_server:
     access_token_class:  Educacity\OAuthBundle\Entity\AccessToken
     refresh_token_class: Educacity\OAuthBundle\Entity\RefreshToken
     auth_code_class:     Educacity\OAuthBundle\Entity\AuthCode
-    #service:
-    #    user_provider: user.provider
-    #    options:
-    #        supported_scopes: user veterinary
+    service:
+        user_provider: user.provider
+        options:
+            supported_scopes: user

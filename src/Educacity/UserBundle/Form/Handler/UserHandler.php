@@ -10,6 +10,7 @@ use Symfony\Component\Security\Core\Encoder\EncoderFactory;
 use Symfony\Component\Security\Core\SecurityContext;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\BrowserKit\Request;
+use Educacity\UserBundle\Entity\UserRepository;
 
 class UserHandler
 {
